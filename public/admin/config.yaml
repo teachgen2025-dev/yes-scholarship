@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/content/landing/index.md"
+        label: "Landing Page"
+        name: "home"
+        fields:
+          - {label: "Hero", name: "hero", widget: "object", fields: [
+              {label: "Headline", name: "headline", widget: "string"},
+              {label: "Subheadline", name: "subheadline", widget: "text"},
+              {label: "CTA Primary", name: "cta_primary", widget: "string"},
+              {label: "CTA Secondary", name: "cta_secondary", widget: "string"}
+            ]}
+          - {label: "Value Props", name: "value_proposition", widget: "list", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+            ]}
+          - {label: "FAQ", name: "faqs", widget: "list", fields: [
+              {label: "Question", name: "question", widget: "string"},
+              {label: "Answer", name: "answer", widget: "text"}
+            ]}

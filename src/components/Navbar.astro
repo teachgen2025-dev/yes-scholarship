@@ -1,0 +1,25 @@
+---
+const menus = [
+  { name: "Beranda", href: "/" },
+  { name: "Tentang Kami", href: "/tentang-kami" },
+  { name: "Program", href: "/program" },
+  { name: "Blog", href: "/blog" },
+];
+---
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-2">
+            <img src="https://i.imgur.com/f6T7A1s.png" alt="YES Logo" class="h-10 w-auto" />
+        </a>
+        
+        <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
+            {menus.map((menu) => (
+                <a href={menu.href} class="hover:text-blue-900 transition">{menu.name}</a>
+            ))}
+        </div>
+        
+        <a href="#" class="bg-blue-900 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-900/20">
+            Portal YES
+        </a>
+    </div>
+</nav>

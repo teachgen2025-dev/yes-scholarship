@@ -1,5 +1,10 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  // Ganti ini dengan domain aslimu nanti kalau sudah upload
+  // Contoh: 'https://beasiswayes.id'
+  site: 'https://contoh-website-kamu.netlify.app', 
+  
+  integrations: [tailwind()],
+});
