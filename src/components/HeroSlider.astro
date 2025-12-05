@@ -11,7 +11,7 @@ interface Props {
 const { slides } = Astro.props;
 ---
 
-<section class="relative h-[600px] md:h-[700px] overflow-hidden bg-slate-900 rounded-b-[2.5rem] md:rounded-[2.5rem] mx-0 md:mx-6 mt-0 md:mt-4 shadow-2xl">
+<section class="relative h-[500px] md:h-[700px] overflow-hidden bg-slate-900 rounded-b-[2.5rem] md:rounded-[2.5rem] mx-0 md:mx-6 mt-0 md:mt-4 shadow-2xl">
   <div id="hero-slider" class="relative w-full h-full">
     {slides.map((slide, index) => (
       <div class={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'} slide-item`}>
@@ -20,7 +20,7 @@ const { slides } = Astro.props;
         
         <div class="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8 md:px-16">
           <div class="max-w-2xl text-white pt-20">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">{slide.headline}</h1>
+            <h1 class="text-3xl md:text-6xl font-extrabold mb-6 leading-tight">{slide.headline}</h1>
             <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-lg">{slide.subheadline}</p>
             <a href={slide.cta_link} class="inline-block bg-yellow-400 text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition transform hover:-translate-y-1">
                 {slide.cta_text}
